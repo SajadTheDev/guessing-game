@@ -27,7 +27,7 @@ document.querySelector('.check').addEventListener('click', function () {
 
   if (!guess) {
     displayMessage('No Number 👾');
-    guessInput.classList.add('shake'); // اضافه کردن افکت لرزش
+    guessInput.classList.add('shake');
     setTimeout(() => guessInput.classList.remove('shake'), 500);
   } else if (guess === secretNumber) {
     displayMessage('🎉 Is Correct! 👻');
@@ -38,7 +38,6 @@ document.querySelector('.check').addEventListener('click', function () {
     numberBox.style.background = '#fff';
     numberBox.style.color = '#333';
 
-    // نمایش پیام برنده شدن
     const winMessage = document.createElement('div');
     winMessage.textContent = '🏆 Congratulations! You Won!';
     winMessage.classList.add('win-message');
@@ -76,7 +75,6 @@ document.querySelector('.again').addEventListener('click', function () {
   numberBox.style.background = '#eee';
   numberBox.style.color = '#333';
 
-  // حذف پیام برنده شدن
   const winMessage = document.querySelector('.win-message');
 
   if (winMessage) winMessage.remove();
