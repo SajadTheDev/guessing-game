@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/src/styles.css" rel="stylesheet" />
+    <title>Vite App</title>
+  </head>
+  <body
+    class="flex min-h-screen items-center justify-center bg-gradient-to-br from-gray-800 to-black p-4 text-white"
+  >
+    <div
+      class="container mx-auto grid max-w-screen-xl grid-cols-1 items-center gap-6 md:grid-cols-2 lg:grid-cols-3"
+    >
+      <!-- Header Section -->
+      <header class="text-center lg:col-span-3">
+        <h1 class="mb-2 text-3xl font-extrabold text-blue-400 sm:text-4xl lg:text-5xl">
+          Guess My Number!
+        </h1>
+        <p class="text-sm text-gray-300 sm:text-base lg:text-lg">(Between 1 and 20)</p>
+      </header>
+
+      <!-- Main Content -->
+      <div
+        class="flex flex-col items-center justify-center rounded-lg bg-gray-700 p-6 shadow-lg lg:col-span-2"
+      >
+        <div
+          class="number mb-6 flex h-24 w-24 items-center justify-center rounded-md bg-white text-4xl font-extrabold text-black shadow-md sm:h-28 sm:w-28 sm:text-6xl"
+        >
+          ?
+        </div>
+        <div class="flex w-full flex-col items-center justify-center gap-4 md:flex-row">
+          <input
+            type="number"
+            class="guess w-32 rounded-md border-2 border-blue-400 bg-gray-800 p-2 text-center text-2xl text-white focus:ring focus:ring-blue-500"
+          />
+          <button
+            class="check rounded-md bg-green-500 px-6 py-2 text-white shadow-md hover:bg-green-600"
+          >
+            Check!
+          </button>
+        </div>
+      </div>
+
+      <!-- Sidebar Section -->
+      <aside
+        class="flex flex-col items-center space-y-4 rounded-lg bg-gray-700 p-6 text-center shadow-lg"
+      >
+        <p class="message text-lg font-semibold text-yellow-400">Start guessing...</p>
+        <div>
+          <p class="label-score text-xl text-gray-200">
+            💯 Score:
+            <span class="score font-bold">20</span>
+          </p>
+          <p class="label-highscore mt-2 text-xl text-gray-200">
+            🥇 Highscore:
+            <span class="highscore font-bold">0</span>
+          </p>
+        </div>
+        <button
+          class="again rounded-md bg-blue-500 px-4 py-2 text-white shadow-md hover:bg-blue-600"
+        >
+          Again!
+        </button>
+      </aside>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
